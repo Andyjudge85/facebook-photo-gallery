@@ -1,0 +1,20 @@
+Its very easy to install the program.
+
+Requirements:
+1. PHP 5 supported hosting
+2. Basic knowledge to know how to setup an application in facebook
+3. Library folder contains facebook php library
+
+Steps:
+1. Visit http://www.facebook.com/developers and click setup new application.
+2. Provide application name, description.
+3. Provide the Connect URL. For my case I provide http://thinkdiff.net/facebook/fblatestphotos/ (because here i hosted the applications code)
+4. Click Save Changes and you'll get api and secret key.
+5. Now place those api and secret keys in the config.php
+$config['fb']           =   array(
+    'api_key'       =>  'xxxxxxxxxxxxxxxxxxxxxxxxxxxx', //place api key here
+    'secret_key'    =>  'yyyyyyyyyyyyyyyyyyyyyyyyyyyy', //place secret key here
+);
+6. Upload all codes of this project in your hosting.
+7. Now visit the gallery. In my case the url is http://thinkdiff.net/facebook/fblatestphotos/
+

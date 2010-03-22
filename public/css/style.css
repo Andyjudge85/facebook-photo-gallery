@@ -1,0 +1,297 @@
+/*
+Project: Open Source Facebook Photo Gallery (JQuery, FBConnect Base)
+Author: Md. Mahmud Ahsan (http://thinkdiff.net)
+version: 1.0
+Description: This is a open source php, jquery, fbconnect and facebook api base photo gallery.
+             Using this application you'll see the latest photos of your friends in facebook.
+             Here Facebook connect is used for login purpose and facebook api is used to retrieve your friends
+             latest photos from facebook. Jquery is used to create user friendly UI and photo gallery.
+
+Copyright (C) 2010  Md. Mahmud Ahsan (mahmud@thinkdiff.net)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
+body{
+    margin: 0;
+    top:0;
+    padding: 0;
+}
+
+.headertop{
+    height: 25px;
+    background-color: #3B5998;
+    color: white;
+    font-family: Tahoma;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+.clear{
+    clear: both;
+}
+
+.headerboldtitle{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+.headertitle{
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.headertitleright{
+    font-size: 11px;
+    margin-right: 10px;
+    float: right;
+    margin-top: 5px;
+}
+.headertitleright a{
+    text-decoration: none;
+    color: white;
+}
+.headertitleright a:hover{
+    text-decoration: underline;
+}
+
+#divbody{
+    margin-left: 40px;
+}
+.bodytitle1{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Tahoma;
+}
+
+.bodytitle2{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.bodyleft1{
+    width: 300px;
+    float: left;
+}
+
+.bodyleft2{
+    float: left;
+}
+
+.bodystep{
+    padding: 5px;
+}
+
+.bodystep .step{
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    margin-right: 15px;
+}
+
+div a{
+    text-decoration: none;
+}
+div a.pt {
+    cursor:default;
+}
+
+#photoviewer{
+    float: left;
+    min-height: 350px;
+    width: 605px;
+    background-color: #F7F7F7;
+    padding: 5px;
+    border-top: 1px solid #BBBBBB;
+    border-bottom: 1px solid #BBBBBB;
+    overflow: hidden;
+}
+
+#photoright{
+    height: 500px;
+    margin-left: 10px;
+    float: left;
+}
+#photoremain{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #265791;
+    margin-top: 2px;
+    position: relative;
+}
+#photoadvertise{
+
+}
+
+#photocomment{
+    
+}
+.slider{
+    margin-left: 14px;
+    width: 317px !important;
+}
+.slider ul li div img{
+    cursor: pointer;
+}
+#slider ul, #slider li{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+#slider2{margin-top:1em;}
+#slider li{
+    width:317px;
+    height:57px;
+    overflow:hidden;
+}
+#prevBtn, #nextBtn,
+#slider1next, #slider1prev{
+    display:block;
+    width:15px;
+    height:30px;
+    position:absolute;
+    left:0px;
+    top:32px;
+}
+#nextBtn, #slider1next{
+    left: 333px;
+}
+#prevBtn a, #nextBtn a,
+#slider1next a, #slider1prev a{
+    display:block;
+    position:relative;
+    width:15px;
+    height:28px;
+    background:url(../images/btn_prev.gif) no-repeat 0 0;
+}
+#nextBtn a, #slider1next a{
+    background:url(../images/btn_next.gif) no-repeat 0 0;
+}
+
+#photoviewer_left{
+    font-family: arial;
+    float: left;
+    color: #3B5998;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+#photoviewer_right{
+    font-family: arial;
+    float: right;
+}
+#photoviewer_right a{
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:11px;
+    color:#3B5998;
+    padding:3px 3px 2px;
+}
+
+#photoviewer_right a:hover{
+    background-color:#3B5998;
+    border-bottom:1px solid #3B5998;
+    border-color:#D8DFEA #D8DFEA #3B5998;
+    color:#FFFFFF;
+    text-decoration:none;
+}
+
+#phototitle{
+    color:#333333;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:11px;
+}
+
+#phototags{
+    color:#333333;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:11px;
+    clear:left;
+    line-height:15px;
+    margin:0;
+    text-align:left;
+    width:400px;
+}
+
+#photoinfo{
+    color:#333333;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size:11px;
+    border-left:1px solid #CCCCCC;
+    float:right;
+    line-height:15px;
+    padding-left:10px;
+    padding-right:20px;
+    width:170px;
+}
+#photoinfo a, #phototags a{
+    color:#3B5998;
+    cursor:pointer;
+    outline-style:none;
+    text-decoration:none;
+}
+#photoinfo a:hover, #phototags a:hover{
+    color:#3B5998;
+    cursor:pointer;
+    outline-style:none;
+    text-decoration: underline;
+}
+
+#photocaptionleft {
+    margin:0;
+    padding:0;
+    text-align:left;
+    width:auto;
+}
+
+img{
+    border: 0;
+}
+
+.loading{
+    background: transparent url(../images/loader.gif) no-repeat scroll center center;
+    height: 100px;
+    width: 100px;
+    margin-left: 240px;
+    margin-top: 180px;
+    margin-bottom: 200px;
+}
+
+#albumphotos{
+    background-color:#F7F7F7;
+    height:446px;
+    overflow:auto;
+    text-align:center;
+    width:375px;
+}
+
+.apsingle{
+    background-color: #F7F7F7;
+    border:1px solid #BBBBBB;
+    float:left;
+    height:75px;
+    margin:2px;
+    padding:4px;
+    width:75px;
+    overflow: hidden;
+}
+.apsingle img{
+    cursor: pointer;
+}
+
+.fleft{
+    float: left;
+}
