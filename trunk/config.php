@@ -8,7 +8,7 @@
  * 3. Update the api_key and secret_key in $config
  */
 
-$config['app_title']    =   "Open Source Facebook Photo Gallery (JQuery, FBConnect Base)";
+$config['app_title']    =   "Open Source Facebook Photo Gallery (JQuery, PHP, FBConnect Base)";
 $config['base_url']     =   ""; //http://thinkdiff.net/facebook/fblatestphotos
 $config['session_index']=   'homepage';
 

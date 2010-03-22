@@ -1,4 +1,4 @@
-Project: Open Source Facebook Photo Gallery (JQuery, FBConnect Base)
+Project: Open Source Facebook Photo Gallery (JQuery, PHP, FBConnect Base)
 Author: Md. Mahmud Ahsan (http://thinkdiff.net)
 version: 1.0
 Description: This is a open source php, jquery, fbconnect and facebook api base photo gallery.

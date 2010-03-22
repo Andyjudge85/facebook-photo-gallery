@@ -2,7 +2,7 @@
     <div style="float: left">
         <a href="<?=$config['base_url']?>">
             <span class="headerboldtitle">
-                Open Source Facebook Photo Gallery (JQuery, FBConnect Base)
+                Open Source Facebook Photo Gallery (JQuery, PHP, FBConnect Base)
             </span>
         </a>
         <span class="headertitle">

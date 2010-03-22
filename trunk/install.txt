@@ -3,7 +3,6 @@ Its very easy to install the program.
 Requirements:
 1. PHP 5 supported hosting
 2. Basic knowledge to know how to setup an application in facebook
-3. Library folder contains facebook php library
 
 Steps:
 1. Visit http://www.facebook.com/developers and click setup new application.
