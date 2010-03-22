@@ -1,7 +1,3 @@
-#summary How to use this project
-
-= Introduction =
-
 <h1>Open Source Facebook Photo Gallery (JQuery, FBConnect Base)</h1>
 <h3>
 Author: Md. Mahmud Ahsan (<a href="http://thinkdiff.net">http://thinkdiff.net</a>) <br />
