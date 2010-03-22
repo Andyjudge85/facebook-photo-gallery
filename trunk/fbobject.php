@@ -17,7 +17,7 @@ if (!$user){
 $friends        =   getFriendList($facebook);
 
 //retrieving latest albums
-$query1         =   "SELECT cover_pid, name, aid, owner, created, link FROM album WHERE owner in ($friends) AND cover_pid != 0 ORDER BY modified_major desc limit 200";
+$query1         =   "SELECT cover_pid, name, aid, owner, created, link FROM album WHERE owner in ($friends) AND cover_pid != 0 AND size >= 4 ORDER BY modified_major desc limit 100";
 $albums         =   $facebook->api_client->fql_query($query1);
 $defaultAlbum   =   $albums[0];
 
