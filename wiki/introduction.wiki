@@ -4,7 +4,7 @@ Author: Md. Mahmud Ahsan (<a href="http://thinkdiff.net">http://thinkdiff.net</a
 version: 1.0
 </h3>
 
-<b>Project Demo:</b><a href="http://thinkdiff.net/facebook/fblatestphotos/index.php">http://thinkdiff.net/facebook/fblatestphotos</a>
+<b>Project Demo:</b><a href="http://thinkdiff.net/facebook/fblatestphotos/index.php">http://thinkdiff.net/facebook/fblatestphotos/index.php</a>
 
 <b>
 Description: This is a open source php, jquery, fbconnect and facebook api base photo gallery. Using this application you'll see the latest photos of your friends in facebook.
